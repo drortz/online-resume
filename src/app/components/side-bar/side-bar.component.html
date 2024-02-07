@@ -1,1 +1,26 @@
-<p>side-bar works!</p>
+<div class="container-fluid" style="background: aliceblue">
+  <div class="row">
+    <p-image [src]="profileImageSource" alt="Image" width="250"></p-image>
+  </div>
+  <div class="row pt-3">
+    <h5>Personal info</h5>
+  </div>
+  <hr>
+  <div class="row">
+    <h6>Phone: </h6>
+    <p>{{phoneNumber}}</p>
+
+    <h6>Address: </h6>
+    <p>{{address}}</p>
+
+    <h6>Email: </h6>
+    <p>{{email}}</p>
+
+    <h6>Linked-in: </h6>
+    <a [href]="linkedIn" target="_blank">{{linkedIn}}</a>
+
+    <h6>Github: </h6>
+    <a [href]="gitHub" target="_blank">{{gitHub}}/</a>
+
+  </div>
+</div>
