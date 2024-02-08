@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SideBarComponent {
 
-  public profileImageSource: string = '../../../assets/User.jpg';
+  public profileImageSource: string = '../../../assets/DrorProfilePicture.jpg';
   public phoneNumber: string = 'tel:647-997-9506';
   public address: string = 'Richmond Hill, ON';
   public email: string = 'mailto:Drortz123@gmail.com'
