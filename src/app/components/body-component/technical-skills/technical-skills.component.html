@@ -1,0 +1,13 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col p-4"  *ngFor="let entry of this.techStackMap.entries()">
+      <p-card [header]=entry[0] [style]="{ width: '200px' ,height: '220px'}">
+        <ng-template pTemplate="header">
+          <img alt="Card" [src]=entry[1]  class="img-fluid" style=" width: 200px; height: 150px; object-fit: contain;"/>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>
