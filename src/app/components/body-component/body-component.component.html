@@ -1,21 +1,29 @@
-<div class="container-fluid pt-3" style="height: 880px">
-  <div class="text-start">
-    <h5 style="font-family: Arial; line-height: 1.5" [innerHTML]="introduction"></h5>
+<div class="container-fluid pt-3">
+  <div class="row">
+    <div class="col text-start">
+      <h5 style="font-family: Arial; line-height: 1.5" [innerHTML]="introduction"></h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p-tabView>
+        <p-tabPanel header="core competencies">
+          <app-core-competencies></app-core-competencies>
+        </p-tabPanel>
+        <p-tabPanel header="Technology Stack">
+          <app-technical-skills></app-technical-skills>
+        </p-tabPanel>
+        <p-tabPanel header="Professional Experience">
+          <app-experience-component></app-experience-component>
+        </p-tabPanel>
+        <p-tabPanel header="Education ">
+          <app-education-component></app-education-component>
+        </p-tabPanel>
+      </p-tabView>
+    </div>
   </div>
 
-  <p-tabView>
-    <p-tabPanel header="core competencies">
-      <app-core-competencies></app-core-competencies>
-    </p-tabPanel>
-    <p-tabPanel header="Technology Stack">
-      <app-technical-skills></app-technical-skills>
-    </p-tabPanel>
-    <p-tabPanel header="Professional Experience">
-      <app-experience-component></app-experience-component>
-    </p-tabPanel>
-    <p-tabPanel header="Education ">
-      <app-education-component></app-education-component>
-    </p-tabPanel>
-  </p-tabView>
+
+
 
 </div>
