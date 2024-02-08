@@ -23,6 +23,10 @@ import { CoreCompetenciesComponent } from './components/body-component/core-comp
 import { TechnicalSkillsComponent } from './components/body-component/technical-skills/technical-skills.component';
 import { OrderListModule } from 'primeng/orderlist';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { FormsModule } from '@angular/forms';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
     TabViewModule,
     CardModule,
     OrderListModule,
-    AnimateOnScrollModule
+    AnimateOnScrollModule,
+    AutoCompleteModule,
+    FormsModule,
+    ScrollPanelModule,
+    DividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

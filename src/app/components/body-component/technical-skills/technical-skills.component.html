@@ -1,13 +1,32 @@
 
-
-<div class="container">
+<div class="container-fluid pb-3">
   <div class="row">
-    <div class="col p-4"  *ngFor="let entry of this.techStackMap.entries()">
-      <p-card [header]=entry[0] [style]="{ width: '200px' ,height: '220px'}">
-        <ng-template pTemplate="header">
-          <img alt="Card" [src]=entry[1]  class="img-fluid" style=" width: 200px; height: 150px; object-fit: contain;"/>
-        </ng-template>
-      </p-card>
+    <div class="col-3">
+      <p-autoComplete [(ngModel)]="selectedItem" [suggestions]="suggestions" type="search"
+                      (completeMethod)="search($event)" placeholder="Search..."></p-autoComplete>
+    </div>
+    <div class="col">
+      <img *ngIf="selectedItem && techStackMap.get(selectedItem)" [src]=techStackMap.get(selectedItem) alt="Card"
+           class="img-fluid" style=" width: 75px;  object-fit: contain;"/>
     </div>
   </div>
 </div>
+
+<hr>
+
+<!--<p-scrollPanel [style]="{ width: '100%', height: '500px' }" >-->
+  <div class="container" style="height: 530px; overflow: auto;">
+    <div class="row">
+      <div class="col p-4"  *ngFor="let entry of this.techStackMap.entries()">
+        <p-card [header]=entry[0] [style]="{ width: '190px' ,height: '210px'}">
+          <ng-template pTemplate="header">
+            <div class="text-center">
+              <img alt="Card" [src]=entry[1]  class="img-fluid" style=" width: 100px; height: 150px; object-fit: contain;"/>
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+<!--</p-scrollPanel>-->
+
